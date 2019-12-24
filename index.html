@@ -9,10 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="container mt-5">
+        <div :class="['p-3','text-white', fondo]">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit mollitia quae odio. Inventore corrupti aut ratione, nesciunt similique delectus iusto omnis fuga obcaecati cupiditate! Reiciendis animi vero voluptatem aliquid aperiam?</p>
+        </div>
+        <input type="text" class="form-control my-3" v-model="fondo">
 
+        <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color}">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corrupti veniam quisquam possimus ad voluptates, facere, obcaecati omnis asperiores corporis voluptate distinctio quo iusto, labore aperiam pariatur vitae ipsa est!</p>
+        </div>
+        <button class="btn btn-primary" @click="color = !color">Cambiar Color</button>
     </div>
-    
+
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="02.js"></script>
